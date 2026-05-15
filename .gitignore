@@ -1,0 +1,24 @@
+# Rust build artifacts
+e2ee_sim/target/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Jupyter checkpoints
+**/.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo

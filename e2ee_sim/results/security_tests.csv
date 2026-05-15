@@ -1,0 +1,11 @@
+scenario,algorithm,attempt,result,property,verdict
+1-Eavesdropping,AES-GCM-SIV,random key,decrypt-failed,CONFIDENTIALITY,PASS
+1-Eavesdropping,AES-GCM-SIV,partial key,decrypt-failed,CONFIDENTIALITY,PASS
+1-Eavesdropping,AES-GCM-SIV,zero key,decrypt-failed,CONFIDENTIALITY,PASS
+2-Tampering,AES-GCM-SIV,flip-bit-pos-0,authentication-failed,INTEGRITY,PASS
+2-Tampering,AES-GCM-SIV,flip-bit-pos-13,authentication-failed,INTEGRITY,PASS
+2-Tampering,AES-GCM-SIV,flip-bit-pos-25,authentication-failed,INTEGRITY,PASS
+3-Replay Attack,AES-GCM-SIV,replay-same-ciphertext-old-timestamp,rejected,AUTHENTICITY,PASS
+4-Nonce Reuse,AES-GCM,same-nonce-two-plaintexts,xor-leakage-demonstrated,NONCE-MISUSE RESISTANCE,VULNERABLE
+4-Nonce Reuse,AES-GCM-SIV,same-nonce-two-plaintexts,synthetic-iv-different,NONCE-MISUSE RESISTANCE,SECURE
+5-Man-in-the-Middle,X25519 + AES-GCM-SIV,public-key-substitution,detected,AUTHENTICITY + FORWARD SECRECY,PASS
